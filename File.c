@@ -1,0 +1,45 @@
+#include "file.h"
+#include <stdio.h>
+
+int minimo(int a[], int n) {
+  int i, pos = 0;
+
+  for(i = 1; i < n ; i++) {
+    if(a[i] < a[pos])
+      pos = i;
+  }
+
+  return pos;
+}
+
+void swap(int *a, int* b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void ordina_array(int *a, int n) {
+  int i, min;
+
+  for(i = 0; i < n - 1; i++) {
+    min = minimo(a + i, n - i) + i;
+    swap(&a[i], &a[min]);
+  }
+
+}
+
+void input_array(int * a, int n) { 
+  int i;
+
+  for(i = 0; i < n; i++){
+    scanf("%d", &a[i]);
+  }
+}
+
+void output_array(int * a, int n) { 
+  int i = 0;
+
+  for(; i < n; i++){
+    printf("%d\t", a[i]);
+  }
+}
