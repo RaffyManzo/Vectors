@@ -1,12 +1,14 @@
-#include <stdio.h>
 #include "file.h"
+#include <stdio.h>
+
+#define n 3
 
 int main(void) {
-  int a[3];
-  printf("Leggere l'array (3 elementi) \n");
-  input_array(a, 3);
-  ordina_array(a, 3);
-  output_array(a, 3);
-  
+  int a[n];
+  printf("Leggere l'array (%d elementi) \n", n);
+  input_array(a, n);
+  ordina_array(a, n);
+  output_array(a, n);
+
   return 0;
 }
