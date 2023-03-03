@@ -1,4 +1,5 @@
 #include "file.h"
+#include "utils.h"
 #include <stdio.h>
 
 int minimo(int a[], int n) {
@@ -10,12 +11,6 @@ int minimo(int a[], int n) {
   }
 
   return pos;
-}
-
-void swap(int *a, int *b) {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
 }
 
 void ordina_array(int *a, int n) {
