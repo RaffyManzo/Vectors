@@ -10,7 +10,7 @@ int main(void) {
   if (check < 0)
     printf("\n\nElemento inesistente");
   else
-    printf("\n\n%d si trova in posizione %d", 5, check);
+    printf("\n\n%d si trova in posizione %d\n\n", 5, check);
 
   if (elimina(a, &n, 2) == 0)
     output_array(a, n);

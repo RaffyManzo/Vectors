@@ -33,6 +33,8 @@ int elimina(int a[], int *n, int x) {
   if (x >= *n || x < 0)
     return -1;
 
+  printf("\n\nVerra' eliminato l'elemento %d in posizione %d", a[x], x);
+
   while (x < (*n) - 1){
     a[x] = a[x + 1];
     x++;
