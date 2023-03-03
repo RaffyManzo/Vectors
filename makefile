@@ -11,4 +11,4 @@ main.o :
 	gcc -c main.c
 
 clean : 
-	rm -f utils.o vettore.o main.o -o vettore.exe
+	rm -f utils.o vettore.o main.o vettore.exe

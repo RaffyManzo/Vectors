@@ -33,8 +33,9 @@ int elimina(int a[], int *n, int x) {
   if (x >= *n || x < 0)
     return -1;
 
-  while (x < *n - 1) {
-    a[x] = a[x++];
+  while (x < (*n) - 1){
+    a[x] = a[x + 1];
+    x++;
   }
 
   (*n)--;
@@ -64,7 +65,7 @@ void input_array(int *a, int n) {
 void output_array(int *a, int n) {
   int i = 0;
 
-  for (; i < n; i++) {
+  for (printf("Il tuo array è:\t"); i < n; i++) {
     printf("%d\t", a[i]);
   }
 }
