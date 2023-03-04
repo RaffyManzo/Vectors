@@ -35,11 +35,12 @@ int elimina(int a[], int *n, int x) {
 
   printf("\n\nVerra' eliminato l'elemento %d in posizione %d", a[x], x);
 
-  while (x < (*n) - 1){
+  while (x < (*n) - 1) {
     a[x] = a[x + 1];
     x++;
   }
 
+  // dimensione del vettore modificata
   (*n)--;
   return 0;
 }
@@ -67,7 +68,7 @@ void input_array(int *a, int n) {
 void output_array(int *a, int n) {
   int i = 0;
 
-  for (printf("Il tuo array è:\t"); i < n; i++) {
+  for (printf("\n\nIl tuo array è:\t"); i < n; i++) {
     printf("%d\t", a[i]);
   }
 }
