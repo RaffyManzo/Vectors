@@ -1,8 +1,9 @@
 #include "vettore.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) {
-  int n = 3, a[n];
+  int n = 3, *a = calloc(n, sizeof(int));
   printf("Leggere l'array (%d elementi) \n", n);
   input_array(a, n);
   ordina_array(a, n);
@@ -16,6 +17,9 @@ int main(void) {
     output_array(a, n);
   else
     printf("\n\nQualcosa è andato storto");
+
+  printf("\n\nOra inseriamo un nuovo elemento: %d", 18);
+  inserimento(a, &n, 18);
 
   return 0;
 }

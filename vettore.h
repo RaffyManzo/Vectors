@@ -9,6 +9,6 @@ int elimina(int *, int *, int);
 // ricerca un elemento passato come parametro e ritorna la sua posizione
 // se esiste, in caso contrario -1
 int ricerca(int *, int, int);
-int inserimento(int *, int);
+void inserimento(int *, int *, int);
 void input_array(int *, int);
 void output_array(int *, int);

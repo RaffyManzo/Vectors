@@ -57,11 +57,27 @@ int ricerca(int a[], int n, int x) {
   return -1;
 }
 
+void inserimento(int *a, int *n, int new) {
+  int i;
+
+  // realloca la dimensione del vettore, aggiungendo una posizione
+  // accoda il nuovo elemento nella posizione n(ultima posizione utile nel nuovo vettore)
+  // pos = n equivale alla precedente grandezza del vettore
+  a = realloc(a, (*n + 1) * sizeof(int));
+
+  a[*n] = new;
+
+  (*n)++;
+  ordina_array(a, *n);
+  output_array(a, *n);
+}
+
 void input_array(int *a, int n) {
   int i;
 
   for (i = 0; i < n; i++) {
-    scanf("%d", &a[i]);
+    if (!scanf("%d", &a[i]))
+      break;
   }
 }
 
